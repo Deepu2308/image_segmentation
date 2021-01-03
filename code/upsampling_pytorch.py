@@ -10,12 +10,36 @@ from torch import nn
 from torch.functional import F
 from torch import optim
 from copy import deepcopy
+
+
+def get_cm(actual, predictions,nb_classes = 6):
+        
+    confusion_matrix = torch.zeros(nb_classes, nb_classes)
+    with torch.no_grad():
+        
+            _, preds = torch.max(predictions, 1)
+            for t, p in zip(actual.view(-1), preds.view(-1)):
+                    confusion_matrix[t.long(), p.long()] += 1
+    
+    return confusion_matrix.long()
+
 class UpsampleTrainer(nn.Module):
     
     def __init__(self, 
                  n_channels = 2,
-                 bias = False):
+                 bias = False,
+                 n_classification = None,
+                 conv_out_size = 20*7*7):
         super(UpsampleTrainer, self).__init__()
+        
+        
+        
+        self.n_classification = n_classification  #number of classes
+        if n_classification:          
+            self.conv_out_size = conv_out_size
+            self.fc1 = nn.Linear( self.conv_out_size, self.n_classification)
+            
+        
         
         self.conv = nn.Conv2d(
                     in_channels = 1,
@@ -43,10 +67,18 @@ class UpsampleTrainer(nn.Module):
         
     def forward(self,x):
         
-        x = self.conv(x)
-        x = self.transposedConv(x)
         
-        return x
+        x = self.conv(x)
+        x1 = self.transposedConv(x)
+        
+        if self.n_classification:
+            x2 = F.relu(x.view(-1, self.conv_out_size))
+            x2 = F.dropout(x2, training=self.training)
+            x2 = self.fc1(x2)     
+            
+            return x1,x2
+        
+        return x1
         
         
 if __name__ == '__main__':
