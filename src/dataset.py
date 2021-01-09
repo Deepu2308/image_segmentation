@@ -57,3 +57,8 @@ if __name__ == '__main__'    :
     
     #sample loader
     ld = DataLoaderSegmentation(r"C:\Users\deepu\Desktop\MyFolders\Projects\PetProjects\image_segmentation\input")
+
+    #get sample
+    img, msk = ld.__getitem__(0)
+
+    img.shape 
