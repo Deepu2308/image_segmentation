@@ -19,9 +19,13 @@ class DataLoaderSegmentation(data.Dataset):
     """
     
     def __init__(self, 
-                 file_list
+                 file_list,
+                 resize_shape = (256,256)
                  ):
         super(DataLoaderSegmentation, self).__init__()
+        
+        #resize shape
+        self.resize_shape = resize_shape
         
         #save path variable
         self.path = os.getcwd() + '/input/'
@@ -43,16 +47,18 @@ class DataLoaderSegmentation(data.Dataset):
             mask_path = self.mask_map(img_path)
             
             #open images
-            image  = Image.open(img_path)
-            mask   = Image.open(mask_path)
-            
+            image  = Image.open(img_path).resize(self.resize_shape, Image.BOX)
+            mask   = Image.open(mask_path).resize(self.resize_shape, Image.BOX) #filter choice needs imprvement
+           
+                
             #convert to RGB and then numpy array
             #image,mask = image.convert('RGB'),mask.convert('RGB')
 
             #add channel dimension
             image,mask = np.expand_dims(np.array(image),0),\
                                 np.expand_dims(np.array(mask),0)
-            
+            mask[mask>0] = 1
+             
             #reorder axes
             #image,mask =  self.reorder_axes(image), self.reorder_axes()
             
