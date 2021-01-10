@@ -3,3 +3,5 @@
 best_model.pth
 **/src/__pycache__/
 **/src/logs/
+**/src/saved_models/
+**/src/plots/
