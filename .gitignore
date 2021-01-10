@@ -1,2 +1,4 @@
 # data files
 **/input/
+best_model.pth
+**/src/__pycache__/
