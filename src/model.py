@@ -17,17 +17,32 @@ import pandas as pd
 import logging
 import src.dataset as dataset
 
-logging.basicConfig(filename='src/logs/nn_log.log',
-                    filemode='a', 
-                    format='%(name)s - %(levelname)s - %(message)s',
-                    level=logging.INFO)
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+quickhist = lambda x: sns.histplot(x.ravel(), log_scale=(False,True))
 
 
-n_epochs = 1500
+# helper function for data visualization
+def visualize(**images):
+    """PLot images in one row."""
+    n = len(images)
+    plt.figure(figsize=(16, 5))
+    for i, (name, image) in enumerate(images.items()):
+        plt.subplot(1, n, i + 1)
+        plt.xticks([])
+        plt.yticks([])
+        plt.title(' '.join(name.split('_')).title())
+        plt.imshow(image)
+    plt.show()
+
+
+
+
+n_epochs = 40
 batch_size_train = 8
-batch_size_test  = 4
+batch_size_test  = 1
 learning_rate = 0.001
-momentum = 0.5
 
 random_seed = 1
 torch.backends.cudnn.enabled = True
@@ -38,19 +53,28 @@ model = smp.Unet(
     encoder_name="resnet34",        # choose encoder, e.g. mobilenet_v2 or efficientnet-b7
     encoder_weights="imagenet",     # use `imagenet` pretrained weights for encoder initialization
     in_channels=1,                  # model input channels (1 for grayscale images, 3 for RGB, etc.)
-    classes=2,                      # model output channels (number of classes in your dataset)
+    classes=1,                      # model output channels (number of classes in your dataset)
     encoder_depth = 3,
-    decoder_channels = [64, 32, 16]
+    decoder_channels = [32, 16, 8],
+    activation= 'sigmoid'
 )
     
 
 model.cuda()
 
+# =============================================================================
+# check if GPU is available and log model details
+# =============================================================================
 gpu_available = "GPU available?:      " + str(torch.cuda.is_available())
 using_cuda    = "Network using cuda?: " + str(next(model.parameters()).is_cuda)
 
 print(gpu_available)
 print(using_cuda)
+
+logging.basicConfig(filename='src/logs/nn_log.log',
+                    filemode='a', 
+                    format='%(name)s - %(levelname)s - %(message)s',
+                    level=logging.INFO)
 logging.info("\n\n------------------------------------------------------")
 logging.info(gpu_available)
 logging.info(using_cuda)
@@ -61,150 +85,128 @@ n_epochs         = {n_epochs}
 batch_size_train = {batch_size_train}
 batch_size_test  = {batch_size_test}
 learning_rate    = {learning_rate}
-momentum         = {momentum}    
 \n\n"""
 )
 
-optimizer = optim.SGD(model.parameters(), lr=learning_rate,
-                      momentum=momentum)
-criterion = nn.CrossEntropyLoss()
+    
+# =============================================================================
+# read train metadata
+# =============================================================================
+df_train = pd.read_csv(r"input/stage_1_train_images.csv")    
+train,validation = train_test_split(df_train,
+                                    stratify = df_train.loc[:,'has_pneumo']
+                                    )
 
+# =============================================================================
+#train prep
+# =============================================================================
+#create train loader
+train_dataset = dataset.DataLoaderSegmentation(
+    train.new_filename.to_list()
+)
+
+#create train batch generator
+train_loader  = dataset.data.DataLoader(train_dataset, 
+                           batch_size= batch_size_train,
+                           shuffle=True,
+                           num_workers=0)
+train_gen     = iter(train_loader)
+
+# =============================================================================
+#val prep
+# =============================================================================
+#create val loader
+val_dataset = dataset.DataLoaderSegmentation(
+    validation.new_filename.to_list()
+)
+
+#create val batch generator
+val_loader  = dataset.data.DataLoader(val_dataset, 
+                           batch_size= batch_size_test,
+                           shuffle=True,
+                           num_workers=0)
+
+
+# =============================================================================
+# model loss and optimizer
+# =============================================================================
+    
+loss = smp.utils.losses.DiceLoss()
+
+metrics = [
+    smp.utils.metrics.IoU(threshold=0.5),
+]
+
+optimizer = torch.optim.Adam([ 
+    dict(params=model.parameters(), lr=learning_rate),
+])
+
+
+# =============================================================================
+# create epoch runners 
+# =============================================================================
+train_epoch = smp.utils.train.TrainEpoch(
+    model, 
+    loss=loss, 
+    metrics=metrics, 
+    optimizer=optimizer,
+    device='cuda',
+    verbose=True,
+)
+
+valid_epoch = smp.utils.train.ValidEpoch(
+    model, 
+    loss=loss, 
+    metrics=metrics, 
+    device='cuda',
+    verbose=True,
+)
+
+
+# =============================================================================
+# start training
+# =============================================================================
+max_score = 0
+for i in range(0, n_epochs):
+    
+    
+    print('\nEpoch: {}'.format(i))
+    train_logs = train_epoch.run(train_loader)
+    valid_logs = valid_epoch.run(val_loader)
+    
+    # do something (save model, change lr, etc.)
+    if max_score < valid_logs['iou_score']:
+        max_score = valid_logs['iou_score']
+        torch.save(model, './best_model.pth')
+        print('Model saved!')
+        
+    if i == 10:
+        optimizer.param_groups[0]['lr'] *= 1e-1
+        print('Decrease decoder learning rate to 10% of current!')
+        
+        
 if __name__ == '__main__':
     
+    batch = next(iter(train_loader))
+    model.eval()    
+    out = model(batch[0]).cpu().detach().numpy()
+    quickhist(out)
+    quickhist(batch[1].cpu().detach().numpy())
     
-    #read train metadata
-    df_train = pd.read_csv(r"input/stage_1_train_images.csv")    
-    train,validation = train_test_split(df_train,
-                                        stratify = df_train.loc[:,'has_pneumo']
-                                        )
-    
-# =============================================================================
-#     train prep
-# =============================================================================
-    #create train loader
-    train_dataset = dataset.DataLoaderSegmentation(
-        train.new_filename.to_list()
+    for i in range(5):
+        n = np.random.choice(len(val_dataset))
+        
+        image_vis = val_dataset[n][0]#.astype('uint8')
+        image, gt_mask = val_dataset[n]
+        
+        gt_mask = gt_mask.squeeze()
+        
+        x_tensor = image.unsqueeze(0)
+        pr_mask = model.predict(x_tensor)
+        pr_mask = (pr_mask.squeeze().cpu().numpy().round())
+            
+        visualize(
+            image=image_vis.cpu().reshape(pr_mask.shape), 
+            ground_truth_mask=gt_mask.cpu(), 
+            predicted_mask=pr_mask
     )
-    
-    #create train batch generator
-    train_loader  = dataset.data.DataLoader(train_dataset, 
-                               batch_size= batch_size_train,
-                               shuffle=True,
-                               num_workers=0)
-    train_gen     = iter(train_loader)
-
-# =============================================================================
-#     val prep
-# =============================================================================
-    #create val loader
-    val_dataset = dataset.DataLoaderSegmentation(
-        validation.new_filename.to_list()
-    )
-
-    #create val batch generator
-    val_loader  = dataset.data.DataLoader(val_dataset, 
-                               batch_size= batch_size_test,
-                               shuffle=True,
-                               num_workers=0)
-    val_gen     = iter(val_loader)
-
-    #print every 't' steps
-    t = 5
-    
-    
-    for epoch in range(n_epochs):  # loop over the dataset multiple times
-    
-        model.train() 
-        train_loss = 0.0
-        
-        for i_batch, batch in enumerate(train_loader):
-        
-            # get the inputs and labels
-            inputs, labels = batch            
-        
-            # zero the parameter gradients
-            optimizer.zero_grad()
-    
-            # forward + backward + optimize
-            outputs = model(inputs)
-            loss = criterion(outputs, labels)
-            loss.backward()
-            optimizer.step()
-            train_loss += loss.item()
-            break
-    
-        # print epoch level statistics
-        if epoch % t == 0:
-            network.eval()
-            with torch.no_grad():
-                
-                #get test batch
-                try:
-                        test_batch      = next(test_gen)
-                except StopIteration:
-                        test_gen        = iter(test_loader)                
-                        test_batch      = next(test_gen)                                
-                
-                #get predictions
-                predictions = network(test_batch['inputs'])
-                
-                #compute losses
-                test_loss  = criterion(predictions, test_batch['labels'])
-                train_loss /= (i_batch+1)
-                
-                #create confusion matrix
-                cm      = get_cm(labels, outputs)
-                test_cm = get_cm(test_batch['labels'], predictions)
-                
-                #display message every t steps and log every 10t steps
-                msg = "Epoch : {} loss : {:.2f} test_loss: {:.2f} \t acc: {:.2f} test_acc: {:.2f}".format(epoch,
-                       train_loss,
-                       test_loss.item(),
-                       cm.diag().sum() / cm.sum(),
-                       test_cm.diag().sum() / test_cm.sum()
-                       )
-                
-                print(msg)
-                if epoch % (t*20) == 0: logging.info(msg)
-    
-    #log last available results
-    logging.info(msg)
-    
-    #log performance on full test set
-    network.eval()
-    full_test_cm    = get_cm(test_dataset.y, network(test_dataset.X))   
-    full_test_loss  = criterion(predictions, test_batch['labels']).item()
-    msg             = 'Finished Training. Test Accuracy : {:.2f} Mean Loss : {:.2f}'.format( 
-                      (full_test_cm.diag().sum() / full_test_cm.sum()).item(),
-                      full_test_loss)
-    print(msg)
-    logging.info(msg)
-    
-    
-    #save model
-    if True:
-        torch.save({
-                'epoch': epoch,
-                'model_state_dict': network.state_dict(),
-                'optimizer_state_dict': optimizer.state_dict(),
-                'loss': loss,
-    
-        },
-        r"src/saved_models/model2.pkl")
-    
-        #load example
-        checkpoint = torch.load(r"src/saved_models/model2.pkl")
-        network.load_state_dict(checkpoint['model_state_dict'])
-        optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
-        epoch = checkpoint['epoch']
-        loss = checkpoint['loss']
-    
-    #analyze results
-    activity_labels =pd.read_csv("input/LabelMap.csv", index_col=0)
-    test_df = pd.DataFrame(full_test_cm.long().numpy(), 
-                          columns = activity_labels.Activity,
-                          index = activity_labels.Activity)
-    test_df.to_csv('src/ConfusionMatrixTest.csv')
-    
-    
-    
