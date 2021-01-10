@@ -2,3 +2,4 @@
 **/input/
 best_model.pth
 **/src/__pycache__/
+**/src/logs/
