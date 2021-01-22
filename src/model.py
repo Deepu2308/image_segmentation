@@ -42,10 +42,10 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 n_epochs = 100
-batch_size_train = 32
+batch_size_train = 16
 batch_size_test  = 8
 learning_rate = 0.001
-
+num_workers   = 2
 random_seed = 1
 torch.backends.cudnn.enabled = True
 torch.manual_seed(random_seed)
@@ -129,7 +129,7 @@ if __name__ == '__main__':
     train_loader  = dataset.data.DataLoader(train_dataset, 
                                batch_size= batch_size_train,
                                shuffle=True,
-                               num_workers= 0)
+                               num_workers= num_workers)
 
 
     # =============================================================================
@@ -144,7 +144,7 @@ if __name__ == '__main__':
     val_loader  = dataset.data.DataLoader(val_dataset, 
                                batch_size= batch_size_test,
                                shuffle=True,
-                               num_workers=0)
+                               num_workers=num_workers)
     
     # =============================================================================
     # create epoch runners 
