@@ -62,3 +62,1647 @@ momentum         = 0.5
 
 
 
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 1500
+batch_size_train = 8
+batch_size_test  = 4
+learning_rate    = 0.001
+momentum         = 0.5    
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 1500
+batch_size_train = 8
+batch_size_test  = 4
+learning_rate    = 0.001
+momentum         = 0.5    
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 1500
+batch_size_train = 4
+batch_size_test  = 2
+learning_rate    = 0.001
+momentum         = 0.5    
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 1500
+batch_size_train = 4
+batch_size_test  = 2
+learning_rate    = 0.001
+momentum         = 0.5    
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 1500
+batch_size_train = 4
+batch_size_test  = 2
+learning_rate    = 0.001
+momentum         = 0.5    
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 1500
+batch_size_train = 4
+batch_size_test  = 2
+learning_rate    = 0.001
+momentum         = 0.5    
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 1500
+batch_size_train = 4
+batch_size_test  = 2
+learning_rate    = 0.001
+momentum         = 0.5    
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 1500
+batch_size_train = 32
+batch_size_test  = 16
+learning_rate    = 0.001
+momentum         = 0.5    
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 1500
+batch_size_train = 4
+batch_size_test  = 2
+learning_rate    = 0.001
+momentum         = 0.5    
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 8
+batch_size_test  = 1
+learning_rate    = 0.0001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 8
+batch_size_test  = 1
+learning_rate    = 0.0001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 8
+batch_size_test  = 1
+learning_rate    = 0.01
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 8
+batch_size_test  = 1
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 16
+batch_size_test  = 1
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 100
+batch_size_test  = 1
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 100
+batch_size_test  = 1
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 100
+batch_size_test  = 1
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 100
+batch_size_test  = 10
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+    n_epochs         = 40
+    batch_size_train = 32
+    batch_size_test  = 8
+    learning_rate    = 0.001
+    
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+    n_epochs         = 40
+    batch_size_train = 32
+    batch_size_test  = 8
+    learning_rate    = 0.001
+    
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+    n_epochs         = 40
+    batch_size_train = 32
+    batch_size_test  = 8
+    learning_rate    = 0.001
+    
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+    n_epochs         = 40
+    batch_size_train = 32
+    batch_size_test  = 8
+    learning_rate    = 0.001
+    
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 40
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 8
+batch_size_test  = 1
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 8
+batch_size_test  = 1
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 2
+batch_size_test  = 1
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 2
+batch_size_test  = 1
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 1
+batch_size_test  = 1
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 1
+batch_size_test  = 1
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+    n_epochs         = 100
+    batch_size_train = 32
+    batch_size_test  = 8
+    learning_rate    = 0.001
+    
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+    n_epochs         = 100
+    batch_size_train = 32
+    batch_size_test  = 8
+    learning_rate    = 0.001
+    
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+    n_epochs         = 100
+    batch_size_train = 32
+    batch_size_test  = 8
+    learning_rate    = 0.001
+    
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+        n_epochs         = 100
+        batch_size_train = 32
+        batch_size_test  = 8
+        learning_rate    = 0.001
+        
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+        n_epochs         = 100
+        batch_size_train = 32
+        batch_size_test  = 8
+        learning_rate    = 0.001
+        
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 32
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 16
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 16
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 16
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 16
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 16
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 16
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 16
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 16
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 16
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 16
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 16
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 16
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+
+root - INFO - 
+
+------------------------------------------------------
+root - INFO - GPU available?:      True
+root - INFO - Network using cuda?: True
+root - INFO - 
+
+Network Details:
+n_epochs         = 100
+batch_size_train = 16
+batch_size_test  = 8
+learning_rate    = 0.001
+
+
+

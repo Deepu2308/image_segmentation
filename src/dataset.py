@@ -34,11 +34,9 @@ class DataLoaderSegmentation(data.Dataset):
         self.img_files  = [self.path + r'/png_images/' + i \
                            for i in file_list]
         
-        #function to get mask name
-        self.mask_map  = lambda x:  x.replace('images', 'masks') 
-        
-        #used to converto to numpy and axes order ( change BHWC to BCHW )
-        #self.reorder_axes = lambda x: np.moveaxis(x, [0,1,2,3], [0,2,3,1])
+    def mask_map(self, x):
+            #function to get mask name
+            return  x.replace('images', 'masks') 
         
     def __getitem__(self, index):
         
@@ -67,7 +65,11 @@ class DataLoaderSegmentation(data.Dataset):
 
     def __len__(self):
         return len(self.img_files)
-    
+
+#class simple:
+#    def __init__(self, simple = 'asdasd'):
+#        self.simple = simple
+
 if __name__ == '__main__'    :
     
     
@@ -80,3 +82,8 @@ if __name__ == '__main__'    :
     img, msk = ld.__getitem__(0)
 
     print(img.shape)
+
+    import dill
+    import pickle
+    s = dill.dumps(ld)
+    f = pickle.dumps(ld)
