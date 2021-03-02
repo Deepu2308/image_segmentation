@@ -161,4 +161,3 @@ dependencies:
     - webencodings==0.5.1
     - wrapt==1.12.1
     - yapf==0.30.0
-prefix: C:\Users\deepu\.conda\envs\img_seg
